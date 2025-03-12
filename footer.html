@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Footer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .footer {
+            background-color: #25517B;
+            color: white;
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            text-align: left;
+            position: relative;
+        }
+        .footer-logo {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+        .footer-logo img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+        .footer-logo p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .footer-menu, .footer-editors {
+            flex: 1;
+            min-width: 250px;
+            list-style: none;
+        }
+        .footer-menu {
+            text-align: left;
+        }
+        .footer-menu a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 8px 0;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        .footer-menu a:hover {
+            color: #f8d210;
+        }
+        .footer-editors {
+            text-align: left;
+        }
+        .footer-editors strong {
+            display: block;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        .footer-editors a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 8px 0;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-editors a:hover {
+            color: #f8d210;
+        }
+
+        .footer-editors strong:last-child {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .footer-copyright {
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #183A5A;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-menu, .footer-editors {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="img/logo.png" alt="Save Ocean Logo">
+            <p>"Preserving and responsibly utilizing oceans, seas, and marine resources to support sustainable growth."</p>
+        </div>
+        <ul class="footer-menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+        <div class="footer-editors">
+            <strong>EDITORS</strong>
+            <a href="pageEditor_ST1.html">Student 1</a>
+            <a href="pageEditor_ST2.html">Student 2</a>
+            <a href="pageEditor_ST3.html">Student 3</a>
+            <a href="pageEditor_ST4.html">Student 4</a>
+            <strong><a id="page-editor-link" href="#">Page Editor: <span id="page-editor-name">Loading...</span></a></strong>
+        </div>   
+        <div class="footer-copyright">
+            &copy; 2025 Save Ocean. All rights reserved.
+        </div>
+    </footer>
+    
+</body>
+</html>

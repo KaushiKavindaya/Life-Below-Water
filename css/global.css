@@ -1,0 +1,109 @@
+/* Global Styles */
+
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Define color variables for consistency */
+    --primary-color: #175E88;  
+    --secondary-color: #364F74; 
+    --light-color: #D1F8EF;    
+    --neutral-color: #F6F4F0;  
+    --dark-color: #222222;    
+    /* Define spacing variables for layout */
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Set Poppins as default font */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    background-color: var(--primary-color); /*Or a neutral color to start*/
+    color: var(--dark-color); /*Or a dark color to start*/
+    line-height: 1.6; /* Improved readability */
+    font-size: 16px; /* Base font size */
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+    line-height: 1.2;
+    color: var(--primary-color); /*Headlines with primary color */
+}
+
+p {
+    margin-bottom: var(--space-md);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Layout Elements (Examples) */
+.container {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: var(--space-lg);
+}
+
+.btn {
+    display: inline-block;
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: darken(var(--primary-color), 10%); /* Darken on hover (requires a preprocessor like Sass or Less, or use a library like chroma.js) */
+    text-decoration: none;
+}
+
+/* List Styles */
+ul {
+    list-style: none;  /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: var(--space-sm);
+}
+
+/* Form Elements (basic) */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: var(--space-sm);
+    margin-bottom: var(--space-md);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Helper Classes */
+.text-center {
+    text-align: center;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mt-0 {
+    margin-top: 0;
+}

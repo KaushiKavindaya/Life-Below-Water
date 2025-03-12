@@ -1,0 +1,200 @@
+/* Modern CSS Styling */
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif; /* Set Poppins as default font */
+            background-color: #003049; /* Fallback background color */
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .splash-container_info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            position: relative; /* Added position relative */
+        }
+
+        .splash-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0; /* Initially hidden */
+            animation: fadeInBackground 1s forwards 1s; /* Fade in after 1 second */
+        }
+
+        @keyframes fadeInBackground {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .splash_title-container{
+            height: 200px;
+        }
+
+        .splash-heading {
+            font-size: 70px; /* Adjusted font size for better mobile experience */
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+            font-weight: 600;
+            letter-spacing: 1px;
+            display: flex;
+            flex-wrap: nowrap;
+            /* overflow: hidden;  REMOVED */
+            /* white-space: nowrap; REMOVED*/
+            flex-direction: row; /* Ensure spans are in a row */
+            justify-content: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
+        }
+
+        .splash-heading span {
+            animation: revealLetter 1.5s forwards cubic-bezier(0.3, 0.1, 0.6, 1);
+            opacity: 0;
+            display: inline-block;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        @keyframes revealLetter {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .splash-sub_heading {
+            font-size: clamp(1rem, 1.2rem, 1.4rem); /* Adjusted size as needed */
+            margin-top: -10px;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            animation: fadeInSlideUpSubtitle 1s forwards 2.5s ease-out; /* Fade in after title animation */
+        }
+
+        @keyframes fadeInSlideUpSubtitle {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .splash-mission_info {
+            font-size: clamp(0.9rem, 1.1rem, 1.3rem); /* Further adjusted font size for better mobile experience */
+            height: 400px;
+            max-width: 40%; /* Increased width for mobile */
+            padding: 0 20px; /* Adjusted padding for mobile */
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+            text-align: center; /* Changed from left to center */
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideInFromLeft 1s forwards ease-out;
+            animation-delay: 3.0s; /* Delay the appearance after the subtitle */
+            padding-top: 200px;
+        }
+
+        /* Keyframes for the animation */
+        @keyframes slideInFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .team-members {
+            font-size: 0.9rem; /* Adjusted font size for better mobile experience */
+            list-style: none;
+            padding: 0;
+            margin-top: 2rem; /* Reduced margin-top */
+            margin-bottom: 3rem; /* Reduced margin-bottom */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .team-members li {
+            margin-bottom: 0.5rem; /* Further Reduced margin for mobile */
+            margin-right: 8rem; /* Further Reduced margin for mobile */
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInSlideUp 0.8s forwards ease-out;
+            animation-delay: 3.5s; /*Delay appearing group member */
+        }
+
+        .team-members li:last-child {
+            margin-right: 0;
+        }
+
+        /* Keyframes for the animation */
+        @keyframes fadeInSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+
+        /* Responsive Design (slightly adjusted) */
+        @media (max-width: 768px) {
+            .splash-heading {
+                font-size: 2.5rem;
+            }
+
+            .splash-mission_info {
+                font-size: 1.1rem;
+                padding: 0 15px;
+                max-width: 95%;
+            }
+
+            .team-members {
+                font-size: 1rem;
+            }
+
+             .team-members li {
+                margin-bottom: 0.3rem; /* Further Reduced margin for smaller screens */
+                margin-right: 0.7rem; /* Further Reduced margin for smaller screens */
+            }
+        }
+
+
+        /* Smaller Screens */
+        @media (max-width: 480px) {
+            .splash-heading {
+                font-size: 2rem; /* Even smaller on tiny screens */
+                letter-spacing: 0.5px; /* Reduce spacing */
+            }
+            .splash-mission_info {
+                font-size: 1rem;
+            }
+            .team-members {
+                font-size: 0.9rem;
+            }
+        }

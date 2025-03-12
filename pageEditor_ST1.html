@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student - 01 - Kaushi Kavindaya</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/pageEditor_validator.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+    
+    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
+
+    <div class="nav-wrapper">
+        <nav class="navbar-hold"></nav>
+    </div>
+
+    <section class="stud">
+        <h2>Kaushi Kavindya, Student 01</h2>
+    </section>
+
+    <div class="container">
+        <!-- Main content area -->
+        <main>
+
+            <!-- Update those first three sections for the pages you were responsible to implement -->
+
+            <section>
+                <h2 id="splash">Splash Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>The splash page (splash.html) is designed to create an engaging introduction to the website, 
+                            "Life Below Ocean," before redirecting to the main content. It utilizes HTML for structure, 
+                            CSS (splash_styles.css and global.css) for styling and animations, and a small amount of 
+                            JavaScript (splash.js) to dynamically stagger the title animation. The page automatically 
+                            redirects to the home page after a short delay using the <strong>&lt;meta&gt;</strong> tag 
+                            with the `http-equiv="refresh"` attribute.</p>
+
+                        <p>The key HTML elements include a <strong>&lt;div&gt;</strong> with the class 
+                        `splash-container_info` which acts as the main container, centering the content both vertically 
+                        and horizontally using flexbox. Inside this container, an <strong>&lt;img&gt;</strong>tag displays 
+                        a background image (`SplashScreen.webp`).  The `alt` attribute provides alternative text for 
+                        accessibility. An <strong>&lt;h1&gt;</strong> tag with nested <strong>&lt;span&gt;</strong> 
+                        elements create the animated title, "LIFE BELOW WATER".  Each letter is wrapped in a <strong>
+                        &lt;span&gt;</strong> to apply individual animations. A smaller <strong>&lt;h6&gt;</strong> 
+                        provides a subtitle, and a <strong>&lt;p&gt;</strong>tag displays a mission statement.  Finally, 
+                        a <strong>&lt;ul&gt;</strong> with <strong>&lt;li&gt;</strong> elements lists the team members.</p>
+
+                        <p>CSS is crucial for the visual appeal. The `body` element is styled to remove default margins 
+                            and set a fallback background color. The `splash-background` image is positioned absolutely 
+                            and given a high `z-index` to appear behind the content. The core of the styling involves 
+                            animations, which are created using CSS `@keyframes`. The `fadeInBackground` animation fades 
+                            in the background image. The `revealLetter` animation makes each letter of the title appear 
+                            with a slight slide-up effect. `fadeInSlideUpSubtitle` animates the subtitle. 
+                            <br><br>
+                            The mission statement uses `slideInFromLeft` to slide into view. The team member list uses 
+                            `fadeInSlideUp` to make each name appear with a fade and slide-up effect. Flexbox is heavily 
+                            used to control the layout and alignment of elements within the main container, ensuring 
+                            responsiveness. Media queries are used to adjust font sizes and padding for different screen 
+                            sizes, enhancing the user experience on mobile devices. Key CSS properties include `display: 
+                            flex`, `justify-content`, `align-items`, `position: absolute/fixed/relative`, 
+                            `z-index`, `opacity`, `transform`, `animation`, `font-size`, `text-shadow`, and 
+                            `media queries`.</p>
+
+                        <p>The JavaScript file (splash.js) dynamically sets the `animationDelay` property for each <strong>&lt;
+                            span&gt;</strong> within the `splash-heading`, creating a staggered animation effect for the 
+                            title. This is achieved using `document.querySelectorAll` to select all <strong>&lt;span&gt;
+                            </strong> elements and then iterating over them using `forEach`. A random delay is calculated 
+                            for each span, creating a unique visual effect.</p>
+
+                        <p>The `noscript` tag provides alternative content if JavaScript is disabled, ensuring users can 
+                            still navigate to the home page.</p>
+
+                    <h3>Accessibility</h3>
+                        <p>Accessibility is addressed in several ways.  The `alt` attribute is used on the background 
+                            image to provide descriptive text for screen readers. Semantic HTML tags like <strong>&lt;h1
+                            &gt;</strong>, <strong>&lt;h6&gt;</strong>, <strong>&lt;p&gt;</strong>, and <strong>&lt;ul
+                            &gt;</strong> are used to structure the content logically. The `lang` attribute is set to 
+                            "en" on the <html> tag. The `noscript` tag provides a fallback mechanism for users who have 
+                            JavaScript disabled, allowing them to navigate to the home page manually. The colors and 
+                            fonts used provide sufficient contrast for readability. Furthermore, responsive design 
+                            ensures that the page is usable across a variety of screen sizes and devices.</p>
+                    
+                    <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                        <p><a href="validation_ST1.html#splashVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+
+                    <h3>Link to the page</h3>
+                        <p><a href="splash.html">Include a link to the actual page you describe.</a></p>
+            </section>
+
+            <section>
+                <h2 id="volunteer">Volunteer Page</h2>
+                <h3>Technical Description</h3>
+                <p>
+                    This volunteer page utilizes HTML for structure and CSS for styling. The overall layout is created 
+                    using semantic HTML5 elements like `section`, `<strong>&lt;h1&gt;</strong>`, `<strong>&lt;h2&gt;
+                    </strong>`, `<strong>&lt;p&gt;</strong>`, and `<strong>&lt;a&gt;</strong>`.
+                </p>
+                <p>
+                    The page is divided into three main sections: an introductory section, volunteer programs section, 
+                    and a ratings/reviews section. The introductory section uses a background image set with CSS's 
+                    `background-image`, `background-size`, and `background-position` properties.  A `button` element 
+                    styled with custom CSS is used to link to the volunteer programs section, improving user navigation.  
+                    The volunteer programs section showcases available programs in a horizontally scrolling slider.  
+                    The slider is implemented using a `div` with `overflow: hidden` and CSS transformations applied to a 
+                    child element containing the program cards to create the sliding effect.
+                </p>
+                <p>
+                    The ratings/reviews section gathers user feedback via shark emoji selection and a text area for 
+                    detailed reviews.  The shark emoji selection uses a grid layout (`display: grid`) for organization.  
+                    The star ratings use buttons styled to look like stars.  Reviews are displayed using a horizontal 
+                    scrolling container similar to the volunteer programs section.  `Flexbox` is used within the review 
+                    cards and volunteer program cards for content alignment and responsive behavior.  Media queries are 
+                    used to adjust layout and font sizes for different screen sizes, ensuring responsiveness.
+                </p>
+                <p>
+                    Key HTML tags used:
+                    <ul>
+                        <li><strong>&lt;section&gt;</strong>: Defines major content sections</li>
+                        <li><strong>&lt;h1&gt;</strong>, <strong>&lt;h2&gt;</strong>, <strong>&lt;h3&gt;</strong>: Defines 
+                            headings</li>
+                        <li><strong>&lt;p&gt;</strong>: Defines paragraphs</li>
+                        <li><strong>&lt;a&gt;</strong>: Creates hyperlinks, styled as buttons.</li>
+                        <li><strong>&lt;img&gt;</strong>: Displays images</li>
+                        <li><strong>&lt;select&gt;</strong>:  Creates a dropdown list for filtering program cards.</li>
+                        <li><strong>&lt;textarea&gt;</strong>: Provides a multi-line text input for feedback.</li>
+                        <li><strong>&lt;button&gt;</strong>: Used for star ratings and form submission.</li>
+                    </ul>
+                </p>
+                <p>
+                    Key CSS properties used:
+                    <ul>
+                        <li>`<strong>display: flex</strong>`: Enables flexbox layout for aligning elements.</li>
+                        <li>`<strong>display: grid</strong>`: Enables grid layout for structured arrangements.</li>
+                        <li>`<strong>background-image</strong>`, `background-size`, `background-position`: Controls the appearance of background images.</li>
+                        <li>`<strong>transform: translateX()</strong>`: Used to animate the slider.</li>
+                        <li>`<strong>overflow: hidden</strong>`: Clips content outside the container.</li>
+                        <li>`<strong>transition</strong>`: Creates smooth visual effects.</li>
+                        <li>`<strong>media queries</strong>`:  Adapts the layout for various screen sizes.</li>
+                    </ul>
+                </p>
+            
+                <h3>Accessibility</h3>
+                <p>
+                    Accessibility considerations were integrated into the volunteer page's design and implementation. 
+                    Semantic HTML tags like `<strong>&lt;section&gt;</strong>`, `<strong>&lt;article&gt;</strong>`, and 
+                    appropriate heading levels (`<strong>&lt;h1&gt;</strong>`, `<strong>&lt;h2&gt;</strong>`, `<strong>&lt;
+                    h3&gt;</strong>`) were used to provide a clear document structure for screen readers.  Descriptive 
+                    `alt` attributes were added to all `img` tags to convey the image's content to users who cannot see 
+                    them.  The "star" rating buttons have `aria-label` attributes specifying the number of stars, which 
+                    screen readers can announce. The link in intro section has descriptive text. Color contrast was taken 
+                    in to account to ensure the readbility of the text.
+                </p>
+            
+                <h3>Link to the validation page</h3>
+                <p><a href="validation_ST1.html#volunteerVal">Include a link to the validation page</a>, use the marker 
+                    to jump to the corresponding section of the validation page.</p>
+            
+                <h3>Link to the page</h3>
+                <p><a href="volunteer.html">Include a link to the actual page you describe.</a></p>
+            </section>
+
+            <section>
+                <h2 id="content">Content Page</h2>
+                <h3>Technical Description</h3>
+                <p>This page, named "Life Below the Ocean - Content," aims to educate users about the impact of plastic 
+                    pollution on our oceans. The page structure is built using semantic HTML5 tags for better 
+                    organization and accessibility. The main content is divided into sections using headings (`strong>&lt;
+                    h1&gt;</strong>`, `<strong>&lt;h2&gt;</strong>`) and paragraphs (`<strong>&lt;p&gt;</strong>`). The 
+                    content is structured using a `<strong>&lt;div&gt;</strong>` with the class `content_container` to 
+                    manage overall layout and spacing. Images are included using the `<strong>&lt;img&gt;</strong>` tag, 
+                    with descriptive `alt` attributes for accessibility. A sidebar navigation menu, created using a `
+                    <strong>&lt;div&gt;</strong>` with the class `sidenav-menu`, provides quick access to different 
+                    sections of the page via anchor links (`<strong>&lt;a&gt;</strong>` tags). A "Go to Top" button 
+                    allows easy navigation back to the beginning of the page. 
+                    <br><br>
+                    Key CSS properties are used for styling. 
+                    The `flexbox` layout is used in the `.section_pollution` class to create a responsive, two-column 
+                    layout where text and images alternate. Media queries are employed to adjust the layout for smaller 
+                    screens, ensuring readability and usability on mobile devices. Animations, such as `fadeIn`, 
+                    `fadeInUp`, `slideInLeft`, and `slideInRight`, are used to enhance the user experience by making the 
+                    page more engaging and dynamic. The navigation bar and footer are dynamically loaded using 
+                    JavaScript to maintain consistency across the website.</p>
+            
+                <p><strong>Key HTML Tags:</strong></p>
+                <ul>
+                    <li><strong>&lt;h1&gt;</strong>, <strong>&lt;h2&gt;</strong>: Used for structuring content headings.</li>
+                    <li><strong>&lt;p&gt;</strong>: Used for paragraphs of text.</li>
+                    <li><strong>&lt;img&gt;</strong>: Used to embed images, with the `alt` attribute providing alternative text for accessibility.</li>
+                    <li><strong>&lt;a&gt;</strong>: Used for creating hyperlinks, both internal (within the page) and external.</li>
+                    <li><strong>&lt;div&gt;</strong>: Used for creating containers for grouping elements and applying styles.</li>
+                </ul>
+            
+                <p><strong>Key CSS Properties:</strong></p>
+                <ul>
+                    <li><strong>font-family</strong>: Specifies the font for the text.</li>
+                    <li><strong>margin</strong>, <strong>padding</strong>: Used for spacing elements.</li>
+                    <li><strong>line-height</strong>: Controls the spacing between lines of text.</li>
+                    <li><strong>background-color</strong>, <strong>color</strong>: Sets the background and text colors.</li>
+                    <li><strong>display: flex</strong>: Enables the Flexbox layout model.</li>
+                    <li><strong>flex-direction</strong>: Sets the direction of the flex items in a flex container.</li>
+                    <li><strong>align-items</strong>: Aligns flex items along the cross axis of the flex container.</li>
+                    <li><strong>gap</strong>: Creates gaps between items in a flex container.</li>
+                    <li><strong>width</strong>, <strong>max-width</strong>: Sets the width of elements.</li>
+                    <li><strong>border-radius</strong>: Rounds the corners of elements.</li>
+                    <li><strong>box-shadow</strong>: Adds a shadow effect to elements.</li>
+                    <li><strong>position</strong>: Sets the positioning method for an element.</li>
+                    <li><strong>top</strong>, <strong>left</strong>, <strong>bottom</strong>, <strong>right</strong>: Used to position elements.</li>
+                    <li><strong>opacity</strong>: Sets the opacity of an element.</li>
+                    <li><strong>animation</strong>: Applies animations to elements.</li>
+                    <li><strong>transform</strong>: Applies a 2D or 3D transformation to an element.</li>
+                </ul>
+            
+                <h3>Accessibility</h3>
+                <p>Accessibility was a key consideration during the implementation of this page. Semantic HTML5 tags were 
+                    used to provide a clear document structure.  The `alt` attribute was included for all `<strong>&lt;img
+                    &gt;</strong>` tags, providing descriptive text for screen readers. The sidebar navigation menu uses 
+                    anchor links to allow users to jump directly to specific sections of the page. The "Go to Top" button 
+                    provides an easy way to return to the top of the page, which can be especially helpful for users with 
+                    mobility impairments.  Sufficient color contrast was maintained between text and background to ensure 
+                    readability for users with visual impairments.</p>
+            
+                <h3>Link to the validation page</h3>
+                <p><a href="validation_ST1.html#contentVal">Include a link to the validation page</a>, use the marker to 
+                    jump to the corresponding section of the validation page.</p>
+            
+                <h3>Link to the page</h3>
+                <p><a href="content_ST1.html">Include a link to the actual page you describe.</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge">Challenges and Lessons Learned</h2>
+                <p>
+                    During the development of these web pages, we encountered several challenges that required collaborative problem-solving and adaptation. The primary hurdles involved:
+                </p>
+                <ul>
+                    <li>
+                        <b>Image Acquisition and Optimization:</b> Securing appropriate, high-quality images proved more time-consuming than initially anticipated. Finding images that accurately represented our content while remaining freely available for use (or acquiring the necessary licenses) required significant research and effort.  We primarily used Adobe Stock (or specify which Adobe service) for downloading images, but initial image downloads often resulted in overly large file sizes that negatively impacted page load speed.
+                    </li>
+                    <li>
+                        <b>Collaboration and Version Control:</b> Coordinating contributions from multiple team members, particularly with simultaneous code edits, required diligent use of version control (Git) and careful communication to avoid conflicts and ensure everyone was working with the latest versions.
+                    </li>
+                </ul>
+                <br><br>
+                <p>
+                    <b>Resolution and Lessons Learned:</b>
+                </p>
+                <ul>
+                    <li>
+                        <b>Image Optimization:</b> To address the image size issue, we implemented a multi-pronged approach.  We utilized CloudConvert to convert JPG and PNG images to the WebP format for improved compression and quality.  We also optimized images by resizing them to appropriate dimensions for their intended display size, and strategically compressed images using tools like TinyPNG and ImageOptim (or specify what you used if you used alternatives). The key lesson here was to prioritize image optimization from the outset of the project, rather than addressing it as an afterthought.
+                    </li>
+                    <li>
+                        <b>Collaboration and Version Control:</b> We improved our Git workflow by establishing clear branching strategies and committing changes frequently with descriptive commit messages. Regular communication, using tools like Slack (or specify what you used), proved essential for coordinating changes and resolving merge conflicts promptly. We also started using pull requests to review each other's code before merging it into the main branch. This enhanced code quality and reduced the likelihood of introducing bugs. The main lesson here was the importance of clear communication and a well-defined Git workflow when working in a collaborative environment.  We also used Figma to collaborate on the design and prototyping of the web pages, which helped to ensure consistency and visual appeal.
+                    </li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2 id="compliance">Compliance</h2>
+                <p>
+                    These web pages have been developed with consideration for Janet regulations regarding web page publication.  We have specifically focused on the following aspects to ensure compliance:
+                </p>
+                <ul>
+                    <li>
+                        <b>Copyright and Licensing:</b>  We have verified the licensing of all images and other media used on the pages to ensure they are appropriately licensed for our use.  We have credited the original authors or sources where required, as demonstrated in the References section.  We avoided using any content without verifying its licensing terms.  In particular, we carefully reviewed the licenses associated with images downloaded from Adobe Stock (or specify which Adobe service).
+                    </li>
+                    <li>
+                        <b>Data Protection and Privacy:</b>  These pages do not collect any personal data from users.  Therefore, we have not implemented any specific data protection measures. If we were to collect data in the future, we would need to implement appropriate security measures and comply with relevant data protection regulations, such as the GDPR (or specify the relevant regulations for your context).
+                    </li>
+                    <li>
+                        <b>Content Accuracy and Currency:</b> While the content is not time sensitive, we have tried our best to ensure the accuracy of the information presented. We understand that all web page should be continuously audited to ensure that all the details provided are factual and relevant.
+                    </li>
+                </ul>
+                <br><br>
+                <p>
+                    We acknowledge that accessibility and compliance are ongoing processes. We are committed to continuously improving the accessibility and compliance of these web pages based on user feedback and evolving regulations.
+                </p>
+            </section>
+            
+            <section>
+                <h2 id="ref">References</h2>
+                <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
+                    <ul class="ref">
+                        <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 01 March 2025).</li>
+                        <li>TinyPNG. <i>Compress PNG images for free.</i> Available at: <a href="https://tinypng.com/">https://tinypng.com/</a> (Last accessed: 05 March 2025).</li>
+                        <li>CloudConvert. <i>Convert anything to anything.</i> Available at: <a href="https://cloudconvert.com/">https://cloudconvert.com/</a> (Last accessed: 06 March 2025).</li>
+                        <li>Adobe Stock (or specify which Adobe service).  Available at: [Adobe service URL] (Last accessed: [Date]).</li>
+                        <li>Figma. <i>Collaborative interface design tool.</i> Available at: <a href="https://www.figma.com/">https://www.figma.com/</a> (Last accessed: 28 Feb 2025).</li>
+                        <li>OceanHero. <i>Refer the website</i>. Available at: <a href="https://www.oceanhero.com/">https://www.oceanhero.com/</a> (Last accessed: 02 March 2025).</li>
+                    </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside>
+            <h3>Core pages developed:</h3>
+
+        <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+            <ul class="top-level-ul">
+                <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
+                <li class="top-level-li">Student 1</li>
+                    <ul> 
+                        <li><a href="#splash">Splash page</a></li>
+                        <li><a href="#volunteer">Volunteer page</a></li>
+                        <li><a href="#content">Content page</a></li>
+                    </ul>
+                <li class="top-level-li">Student 2</li>
+                    <ul>
+                        <li><a href="pageEditor_ST2.html#home">Home page </a></li>
+                        <li><a href="pageEditor_ST2.html#table">Table page</a></li>
+                        <li><a href="pageEditor_ST2.html#content">Content page</a></li>
+                    </ul>
+                <li class="top-level-li">Student 3</li>
+                    <ul>
+                        <li><a href="pageEditor_ST3.html#feedback">Feedback page</a> </li>
+                        <li><a href="pageEditor_ST3.html#team">Team page</a></li>
+                        <li><a href="pageEditor_ST3.html#content">Content page</a></li>
+                    </ul>
+                <li class="top-level-li">Student 4</li>
+                    <ul>
+                        <li><a href="pageEditor_ST4.html#profile">Profile page </a></li>
+                        <li><a href="pageEditor_ST4.html#sitemap">Sitemap page</a></li>
+                        <li><a href="pageEditor_ST4.html#content">Content page</a></li>
+                    </ul>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>

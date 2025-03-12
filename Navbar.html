@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="img/logo.png" alt="Life Below the Ocean Logo">
+    </div>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    <div class="navbar" id="navbar">
+        <a href="home.html">Home</a>
+        <a href="volunteer.html">Volunteer</a>
+        <div class="dropdown">
+            <a href="#" class="dropbtn" onclick="toggleDropdown(event, 'contentDropdown')">Content</a>
+            <div class="dropdown-content" id="contentDropdown">
+                <a href="content_ST1.html">Content ST1</a>
+                <a href="content_ST2.html">Content ST2</a>
+                <a href="content_ST3.html">Content ST3</a>
+                <a href="content_ST4.html">Content ST4</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="dropbtn" onclick="toggleDropdown(event, 'aboutDropdown')">About</a>
+            <div class="dropdown-content" id="aboutDropdown">
+                <a href="table.html">Table</a>
+                <a href="team.html">Team</a>
+                <a href="sitemap.html">Sitemap</a>
+            </div>
+        </div>
+        <a href="feedback.html">Feedback</a>
+        <a href="profile.html"><div class="profile-icon"></div></a>
+        <span class="close-btn" onclick="toggleMenu()">&times;</span>
+    </div>
+    
+    
+</body>
+</html>

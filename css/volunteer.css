@@ -1,0 +1,745 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #d1f8ef;
+    color: #333;
+}
+
+.container {
+    max-width: 1350px;
+    overflow: hidden;
+    margin: auto;
+}
+
+h1,
+h2 {
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+/* Introductory Section Styling */
+.intro-section {
+    width: 100%;
+    padding: 50px 20px;
+    border-radius: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    background-image: url('../img/Cleaning.webp');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    height: 650px;
+    position: relative;
+}
+
+.introduction-text {
+    animation: fadeInUp 1s ease-out;
+    /* Add animation to introduction-text */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.intro-section h1 {
+    font-size: 2em;
+    color: #175E88;
+    margin-bottom: 10px;
+    text-align: right;
+    margin-top: 80px;
+}
+
+.intro-section p {
+    font-size: 1.1em;
+    color: #175E88;
+    text-align: right;
+    width: 250px;
+    margin-left: 1050px;
+}
+
+.intro-section .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: right;
+    float: right;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.intro-section .btn:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+    transform: translateY(-2px);
+    /* Slight lift on hover */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    /* More pronounced shadow */
+}
+
+
+/* Volunteer Programs Section */
+#volunteer-programs_holder {
+    width: 100%;
+    padding: 50px 20px;
+    margin-bottom: 20px;
+    border-radius: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #d1f8ef;
+    background-position: center;
+    color: #fff;
+    height: 700px;
+}
+
+.filter-container {
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.program-cards-container {
+    text-align: center;
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    padding: 150px;
+    gap: 20px;
+    scroll-behavior: smooth;
+}
+
+.program-cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+.program-cards-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.program-card {
+    flex: 0 0 33.33%;  /* Showing 3 slides by default */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease;
+    margin: 10px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.program-card:hover {
+    transform: scale(1.05);
+}
+
+.program-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.program-card h3 {
+    margin-top: 0;
+    color: white;
+    font-size: 14px;
+    text-align: left;
+    height: 20px;
+}
+
+.program-card p {
+    margin-top: 5px;
+    font-size: 12px;
+    color: white;
+    text-align: justify;
+}
+
+.program-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.program-card button:hover {
+    background-color: #0056b3;
+}
+
+.slider img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Ratings and Reviews Section */
+#ratings-reviews {
+    padding: 20px;
+    margin-bottom: -26px;
+    background-image: url('../img/review.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.review-container {
+    display: flex;
+    margin: 50px;
+}
+
+.review-container h2 {
+    text-align: center;
+}
+
+.review-column {
+    flex: 1;
+    padding: 20px;
+    color: #000;
+    width: 50%;
+}
+
+.shark-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.box img {
+    width: 75px;
+    animation: wave 2s infinite ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+/* Wave Animation */
+@keyframes wave {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Delay each image for a wave effect */
+.box:nth-child(1) img {
+    animation-delay: 0s;
+}
+
+.box:nth-child(2) img {
+    animation-delay: 0.2s;
+}
+
+.box:nth-child(3) img {
+    animation-delay: 0.4s;
+}
+
+.box:nth-child(4) img {
+    animation-delay: 0.6s;
+}
+
+.box:nth-child(5) img {
+    animation-delay: 0.8s;
+}
+
+/* Hover Effect */
+.box img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Reviews Section Styling */
+.rating-summary {
+    margin-bottom: 15px;
+}
+
+.rating-summary h3 {
+    font-size: 1.5em;
+    color: #28a745;
+}
+
+.rating-summary p {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Modified CSS for Review Cards Container and Review Card */
+.review-cards-container {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Important: Prevent wrapping */
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory;
+    /* Enable scroll snapping for cleaner transitions */
+    gap: 20px;
+    /* Spacing between cards */
+    padding-bottom: 15px;
+    /*Add padding to see full height of the container*/
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+.review-cards-container::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.review-cards-container {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.review-card {
+    flex: 0 0 300px;
+    /*Set width of each card*/
+    border-radius: 8px;
+    scroll-snap-align: start;
+    /*Snap to the start of the card*/
+    background-image: url('../img/reviewmessage.png');
+    background-size: cover;
+}
+
+.review-card h4 {
+    margin-top: 10px;
+    color: #343a40;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.review-card .review-description {
+    font-size: 12px;
+    color: #000;
+    margin-bottom: 25px;
+    margin-left: 10px;
+    width: 300px;
+    margin-top: 20px;
+}
+
+.review-card .review-details {
+    font-size: 11px;
+    color: #777;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.review-card a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.review-card a:hover {
+    text-decoration: underline;
+}
+
+/* Feedback Form */
+#feedback-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+#feedback-form .buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+#feedback-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#feedback-form .submit-button {
+    background-color: #007bff;
+    color: white;
+}
+
+#feedback-form .submit-button:hover {
+    background-color: #0056b3;
+}
+
+#feedback-form .cancel-button {
+    background-color: #ccc;
+    color: #333;
+}
+
+#feedback-form .cancel-button:hover {
+    background-color: #bbb;
+}
+
+#feedback-form .rating-input {
+    margin-bottom: 15px;
+}
+
+#feedback-form .rating-input button {
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 5px;
+}
+
+
+/* Column Container */
+.col-container {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+}
+
+
+.column {
+    padding: 5px;
+    color: #000;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.col1 {
+    flex: 2;
+    background: #fff;
+    font-size: 11px;
+    border-radius: 5px;
+    float: left;
+}
+
+.col2 {
+    flex: 3;
+    background: #fff;
+    font-size: 11px;
+    border-radius: 5px;
+    float: right;
+}
+
+.col3 {
+    flex: 3;
+    background: #fff;
+    font-size: 11px;
+    border-radius: 5px;
+    float: right;
+}
+
+.col3:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Card Content */
+.card-content {
+    padding-top: 260px;
+}
+
+.card-content p {
+    height: 120px;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .program-cards-container {
+        justify-content: flex-start;
+    }
+
+    .program-card {
+        flex: 0 0 60%;
+        margin-right: 0;
+    }
+
+    .intro-section {
+        height: auto;
+    }
+
+    .intro-section h1,
+    .intro-section p {
+        text-align: center;
+        margin-left: auto;
+        width: 100%;
+    }
+
+    .review-container {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .review-column {
+        width: 100%;
+    }
+
+    .shark-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .program-card {
+        flex: 0 0 90%;
+    }
+
+    .shark-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*ADDED MEDIA QUERIES*/
+
+/* Smaller Desktop and Tablets */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .intro-section h1 {
+        font-size: 1.75em;
+    }
+
+    .intro-section p {
+        font-size: 1em;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .intro-section .btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .program-cards-container {
+        padding: 100px 15px;
+    }
+
+    .program-card {
+        flex: 0 0 45%;
+        /* Adjust card size on smaller screens */
+    }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .intro-section h1 {
+        text-align: center;
+        margin-left: auto;
+    }
+
+    .intro-section p {
+        width: 80%;
+    }
+
+    .review-container {
+        flex-direction: column;
+    }
+
+    .review-column {
+        width: 100%;
+    }
+
+    .shark-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .intro-section {
+        padding: 30px 15px;
+        height: auto;
+    }
+
+    .intro-section h1 {
+        font-size: 1.5em;
+        text-align: center;
+        margin-top: 50px;
+
+    }
+
+    .intro-section p {
+        font-size: 0.9em;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .intro-section .btn {
+        margin-top: 20px;
+    }
+
+    #volunteer-programs_holder {
+        padding: 30px 15px;
+        height: auto;
+    }
+
+    .program-cards-container {
+        padding: 50px 15px;
+    }
+
+    .program-card {
+        flex: 0 0 75%;
+        /* Single card per row */
+    }
+
+    #ratings-reviews {
+        padding: 15px;
+    }
+
+    .review-container {
+        margin: 15px;
+    }
+
+    .shark-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .review-card {
+        flex: 0 0 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .intro-section h1 {
+        font-size: 1.2em;
+    }
+
+    .program-card {
+        flex: 0 0 90%;
+    }
+
+    .shark-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Very Small Screens */
+@media (max-width: 400px) {
+    .intro-section h1 {
+        font-size: 1em;
+    }
+
+    .program-card {
+        flex: 0 0 100%;
+    }
+
+    .col-container {
+        flex-direction: column;
+    }
+}
+
+/* Specific adjustments for the Volunteer Program cards' layout */
+@media (max-width: 600px) {
+    .col-container {
+        flex-direction: column;
+        /* Stack columns on smaller screens */
+    }
+
+    .col1,
+    .col2,
+    .col3 {
+        width: 100%;
+        /* Make columns full width */
+        margin-bottom: 5px;
+        /* Add spacing between stacked columns */
+        float: none;
+        /* Remove float */
+    }
+}

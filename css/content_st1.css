@@ -1,0 +1,177 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.content_container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    margin-right: 100px;
+    /* Remove right margin for responsiveness */
+}
+
+.content_container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.content_container h2 {
+    margin-bottom: 20px;
+}
+
+/* Sidebar Navigation */
+.sidenav-menu {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: #22517a;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    margin-top: 130px;
+}
+
+.sidenav-menu a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.sidenav-menu a:hover {
+    color: #007bff;
+    padding-left: 10px;
+}
+
+.go-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #22517a;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.go-top:hover {
+    background: #0056b3;
+}
+
+/* Two Column Alternating Layout */
+.section_pollution {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+
+
+.section_pollution img {
+    width: 50%;
+    border-radius: 5px;
+    transform: translateY(30px);
+    animation: slideInLeft 1s forwards;
+    object-fit: cover; /* Ensure images fit their container */
+}
+
+.section_pollution .text {
+    width: 50%;
+    transform: translateY(30px);
+    animation: slideInRight 1s forwards;
+}
+
+/* Alternate image positions */
+.section_pollution:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .sidenav-menu {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .sidenav-menu a{
+        color: #4285F4;
+    }
+    .section_pollution {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .section_pollution img,
+    .section_pollution .text {
+        width: 100%;
+    }
+
+     .section_pollution img {
+        max-height: 300px; /* Limit image height on smaller screens */
+    }
+
+    /* Adjust container margins on smaller screens */
+    .content_container {
+        padding: 10px;
+        margin-right: -50px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
